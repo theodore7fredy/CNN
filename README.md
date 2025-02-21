@@ -25,7 +25,9 @@ The primary goal of this project is to train a CNN model capable of accurately r
 1. **Data Loading and Preprocessing**:
    - Data Loading with the separation of data to train_data and test_data by
    ```bash
-   (x_train, y_train), (x_test, y_test) = mnist.load_data()
+   (x_train, y_train), (x_test, y_test) = mnist.load_data()```
+
+   
    - Reshaping data to fit the format required by the CNN.
    ```bash 
    reshape 60,000 28 x 28 matrices into 60,000 784-length vectors
