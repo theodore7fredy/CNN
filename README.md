@@ -23,19 +23,26 @@ The primary goal of this project is to train a CNN model capable of accurately r
 ## **Project Highlights**
 
 1. **Data Loading and Preprocessing**:
-   - Normalizing images (pixel values between 0 and 1).
+   - Data Loading with the separation of data to train_data and test_data by
+   ```bash
+   (x_train, y_train), (x_test, y_test) = mnist.load_data()
    - Reshaping data to fit the format required by the CNN.
+   ```bash 
+   reshape 60,000 28 x 28 matrices into 60,000 784-length vectors
+   - Normalizing images. Normalize each value for each pixel for the entire vector for each input
+   ```bash
+   x_train /= 255 ; x_test /= 255
 
-2. **CNN Model**:
+3. **CNN Model**:
    - Automatic extraction of local features from images using convolutional layers.
    - Feature map size reduction with pooling layers to improve robustness.
    - Classification of digits (0 to 9) using fully connected layers.
 
-3. **Model Training and Validation**:
+4. **Model Training and Validation**:
    - Training the model on the MNIST training dataset.
    - Evaluating performance on the test dataset.
 
-4. **Prediction**:
+5. **Prediction**:
    - Making predictions on new images.
    - Visualizing predictions and comparing them with true labels.
 
@@ -81,3 +88,5 @@ You can install the required dependencies using the following command:
 
 ```bash
 pip install tensorflow numpy matplotlib
+
+
