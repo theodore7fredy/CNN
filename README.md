@@ -25,7 +25,7 @@ The primary goal of this project is to train a CNN model capable of accurately r
 1. **Data Loading and Preprocessing**:
    - Data Loading with the separation of data to train_data and test_data by
    ```bash
-   (x_train, y_train), (x_test, y_test) = mnist.load_data()
+   (x_train, y_train), (x_test, y_test) = datasets.mnist.load_data()
    ```
    - Reshaping data to fit the format required by the CNN.
    ```bash 
@@ -65,7 +65,7 @@ The CNN architecture used in this project includes the following components:
 
 4. **Fully Connected Layers (Dense)**:
    - One dense layer with 128 neurons, activation function `ReLU`.
-   - Output layer with 10 neurons (one for each digit class), activation function `softmax`.
+   - Output layer with 10 neurons (one for each digit class).
 
 ---
 
@@ -80,7 +80,7 @@ The CNN architecture used in this project includes the following components:
 
 ### **1. Prerequisites**
 Ensure the following libraries are installed:
-- Python 3.x
+- Python 3.11.11
 - TensorFlow
 - NumPy
 - Matplotlib
@@ -88,6 +88,8 @@ Ensure the following libraries are installed:
 You can install the required dependencies using the following command:
 
 ```bash
-pip install tensorflow numpy matplotlib
+!pip install tensorflow numpy matplotlib
+```
+
 
 
